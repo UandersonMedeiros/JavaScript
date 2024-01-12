@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origem</title>
+</head>
+<body>
+    <p>
+        Em qual País você mora? <input type="text" name="EUA" id="EUA">
+        <input type="button" value="Enviar" onclick="nacionalidade()">
+    </p>
+    <div id="res">
+
+    </div>
+    <script>
+        
+        function nacionalidade() {
+            var pais = window.document.getElementById('EUA')
+            var res =  window.document.getElementById('res')
+            var origem = pais.value
+            res.innerHTML += `Vivendo no ${origem}`
+            if (origem == 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`  
+            } else {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
