@@ -1,0 +1,1 @@
+const atacante = prompt ("Qual é o nome do personagem atacante?")
